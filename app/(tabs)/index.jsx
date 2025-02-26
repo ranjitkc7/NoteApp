@@ -70,7 +70,7 @@ const NotePage = () => {
       <TouchableOpacity
         activeOpacity={0.7}
         className="w-[9rem] rounded-md bg-[#4361ee] items-center justify-center mt-[1rem] h-[3rem]"
-        onPress={() => router.push("/dataStore")}
+        onPress={() => router.push("/datastore")}
       >
         <Text className="text-white font-[700] text-[1.1rem]">Show Notes</Text>
       </TouchableOpacity>
