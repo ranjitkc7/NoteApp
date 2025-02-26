@@ -1,6 +1,11 @@
-import { FontAwesome, FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
-import React from 'react'
-import { Tabs } from 'expo-router';
+import {
+  FontAwesome,
+  FontAwesome5,
+  FontAwesome6,
+  MaterialIcons,
+} from "@expo/vector-icons";
+import React from "react";
+import { Tabs } from "expo-router";
 
 const LayoutPage = () => {
   return (
@@ -41,18 +46,25 @@ const LayoutPage = () => {
         }}
       />
       <Tabs.Screen
-        name="dataStore"
+        name="datastore"
         options={{
           title: "Collection",
           tabBarIcon: ({ color }) => {
-            return (
-              <FontAwesome6 name="clipboard-list" size={24} color={color} />
-            );
+            return <MaterialIcons name="note-alt" size={30} color={color} />;
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="notedetails"
+        options={{
+          title: "Note Details",
+          tabBarIcon: ({ color }) => {
+            return <FontAwesome6 name="database" size={24} color={color} />;
           },
         }}
       />
     </Tabs>
   );
-}
+};
 
 export default LayoutPage;
